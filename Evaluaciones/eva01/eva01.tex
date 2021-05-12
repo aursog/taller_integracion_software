@@ -1,0 +1,294 @@
+\documentclass[]{article}
+\usepackage{polyglossia}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{amsfonts}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{longtable}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\setmainlanguage{spanish}
+\definecolor{mygray}{RGB}{248,249,250}
+
+\title{Evaluación 1 \protect\\ Taller de Integración de Software}
+\author{Anggelo Urso G. \\ anggelo.urso@inacapmail.cl}
+\date{\today}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Taller de Integración de Software}
+\rhead{\thepage}
+\lfoot{AUG /\LaTeX}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+\thispagestyle{empty}
+\maketitle
+
+\section{Introducción}
+Esta asignatura se basa en el desarrollo de un proyecto de software, el cual se  elaborará durante el semestre y que les permitirá aplicar los conocimientos 
+adquiridos y el desarrollo de las competencias hasta este momento de su carrera.
+
+El proyecto será realizado en tres etapas las cuales son:\\
+
+\begin{enumerate}
+    \item[Etapa 1] Recopilación, Análisis y Gestión de Requerimientos
+    \item[Etapa 2] Desarrollo de Aplicación
+    \item[Etapa 3] Presentación y defensa del proyecto.
+\end{enumerate} 
+
+En esta primera etapa, tienen que definir, analizar y diseñar el proyecto que desarrollarán durante el semestre. Para esto deben buscar un cliente real 
+que les presente una problemática a resolver o generar una propuesta de valor sobre una problemática que el grupo observe. Deberán realizar la captura, 
+análisis de requerimientos y evaluación de la factibilidad, para posteriormente generar el diseño de la solución propuesta.
+
+La problemática por considerar debe contemplar un desarrollo web o una aplicación móvil.
+
+Durante el desarrollo de la actividad el académico, les solicitará entregas previas que, en base a las observaciones obtenidas de parte del académico, les 
+permitan mejorar o realizar cambios según corresponda. Estas entregas incorporarán la información necesaria que permitirá modelar correctamente el sistema 
+y su posterior desarrollo. (Requerimientos, Casos de Uso, Diagramas de Secuencia, Diagramas de Clase, etc.).
+
+\subsection{Criterios de evaluación}
+
+Las actividades consideran los siguientes criterios de evaluación:
+
+\begin{enumerate}
+    \item Considerando la especificación de requerimientos del cliente.
+    \item Incluye el prototipo que responda a las necesidades de la solución.
+    \item Considerando análisis de factibilidad.
+    \item Considerando diagramas de clase, casos de uso, secuencia y de procesos, que representen las necesidades de la aplicación.
+    \item Considerando el diseño del modelo lógico y físico de datos en base al requerimiento.
+    \item Aplicando metodologías ágiles o tradicionales según la naturaleza del proyecto.
+    \item Identificando el propio punto de vista.
+    \item Utilizando información de fuentes establecidas.
+\end{enumerate}
+
+\section{Instrucciones}
+
+\begin{itemize}
+    \item La actividad está contemplada para ser desarrollada en forma grupal (3 integrantes) con evaluación individual. Puede ser desarrollada en parejas o 
+    de forma individual, sin embargo deberán cumplir igualmente con todos los hitos de la asignatura.
+    \item El grupo deberá definir un representante (jefe de proyecto), quien será el interlocutor válido entre el grupo y el académico.
+    \item Deberán indicar, justificar y explicar cómo usaran una metodología de desarrollo, a utilizar durante todo el proyecto en base a su naturaleza, la que 
+    puede ser una propuesta de solución planteada a un tercero, o la solución a un problema detectado por el grupo.
+    \item Deberán rescatar los requerimientos a través de un estudio previo, ya sea con \textit{Stakeholders} dedicados a la propuesta o con aquellos que ustedes
+    identifiquen como \textit{Stakeholders} de la solución.
+    \item La propuesta deberá considerar requerimientos funcionales, de usuario y no funcionales de todo el proceso.
+    \item Los requerimientos deberán encontrarse priorizados, considerando que el desarrollo del proyecto es un MVP (\textit{Minimum Viable Product}) deberán indicar 
+    cuales de los requerimientos serán abordados en la presente entrega y cuáles serán abordados o desarrollados en futuras entregas del producto.
+    \item Se deberán entregar los casos de uso que dan cuenta de las funcionalidades del sistema, considerando diagramas de alto nivel, nivel detallado y una descripción
+    exhaustiva (véase sección \textbf{Actividades}).
+\end{itemize}
+
+\section{Actividades}
+
+La etapa 1 del desarrollo del proyecto deberá contemplar las siguientes actividades:
+
+\begin{enumerate}
+    \item Definición de la problemática a resolver.
+    \item Definición de los casos de uso y modelos.
+    \item Recopilación, especificación y selección de los requerimientos.
+    \item Especificación técnica de la solución.
+    \item Elaboración de prototipos.
+\end{enumerate}
+
+\subsection{Actividad 1}
+
+En esta actividad los estudiantes deben establecer una problemática en un máximo de un párrafo.
+
+Recuerde que la metodología de proyecto implica que:
+
+\begin{enumerate}
+    \item Deben abordar una problemática existente en el mundo empresarial o plantear una propuesta de valor asociada a un emprendimiento, que permita dar solución informática a ella. 
+    \item El problema o situación puede ser entregado directamente por el académico o puede ser levantado por los estudiantes desde la realidad.
+    \item El problema o situación que se pretende resolver, debe ser abordado por los estudiantes como un proyecto, que debe responder a la estructura que la profesión o disciplina disponga.
+    \item Deberán  presentar información que permita justificar la problemática a abordar a través del proyecto. 
+    \item Deberán formular los objetivos del proyecto (generales y específicos), los cuales tienen como propósito indicar los resultados que se pretenden alcanzar. 
+    \begin{enumerate}
+        \item Objetivo general: corresponde al resultado general que se pretende alcanzar con el proyecto. 
+        \item Objetivos específicos: corresponden a las acciones progresivas que permitirán lograr el objetivo general. 
+    \end{enumerate}
+    \item Deberán establecer el contexto de producción del proyecto (grupo etario, sexo, lugar de aplicación, entre otros), de manera de poder identificar al grupo de usuarios de la solución. 
+\end{enumerate}
+
+\subsection{Actividad 2}
+
+En esta actividad los estudiantes deben dar el contexto de las funcionalidades del proyecto y un modelo propuesto para la solución, para ello deberá considerar lo siguiente:
+
+\begin{enumerate}
+    \item Deberán definir 3 procesos de negocios relevantes. Recordar que un proceso de negocio es: <<Un conjunto de actividades y tareas que, una vez completadas, consiguen un objetivo prefijado
+    para la empresa>>, por ende estos 3 procesos de negocios deberán estar enlazados a los objetivos específicos del proyecto.
+    \item Deberán entregar un modelo BPMN que explique cada uno de los procesos de negocio a ser abordado.
+    \item Por cada uno de los procesos de negocio deberán desarrollar el diagrama de casos de uso involucrado, identificando:
+    \begin{enumerate}
+        \item Casos de uso y sus relaciones (\textit{include}, \textit{extend} considerando los puntos de extensión, \textit{generalice}).
+        \item Actores involucrados en el diagrama (tanto internos, como externos)\footnote{Recordar que los actores son quienes interactúan directamente con el sistema, si un actor no interactúa directamente 
+        con el sistema, este no debería estar diagramado}.
+    \end{enumerate}
+    \item Por cada diagrama de casos de uso, deberán construir los casos de uso de alto nivel de todos los casos de uso involucrados en el diagrama.
+    \item Deberán seleccionar 2 casos de uso por cada proceso (6 en total) y realizar:
+    \begin{enumerate}
+        \item Caso de uso extendido.
+        \item Diagrama de clases.
+        \item Diagrama de secuencia.
+    \end{enumerate}
+    \item Deberán presentar la propuesta de solución, modelando el esquema de datos a ser utilizado, para ello deberán proporcionar los siguientes diagramas:
+    \begin{enumerate}
+        \item Modelo conceptual de la solución (MER)\footnote{Modelo entidad relación}.
+        \item Modelo lógico de la solución (MR)\footnote{Modelo relacional, se espera una normalización hasta 3FN o acorde a la arquitectura propuesta}.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Actividad 3}
+
+En esta actividad deberán aplicar las técnicas aprendidas en ingeniería y gestión de requerimientos, cumpliendo como mínimo con:
+
+\begin{enumerate}
+    \item Obtener desde los casos de uso, los requerimientos candidatos.
+    \item Elegir y priorizar los requerimientos a abordar en el desarrollo del proyecto.
+    \item Documentar requerimientos según la norma IEEE830. (Anexo A)
+\end{enumerate} 
+
+Es importante en esta sección la identificación de los requerimientos mínimos necesarios para abordar el MVP de la solución y todo aquel conjunto de requerimientos que queden fuera de la propuesta de MVP, deberá
+quedar detallado en las conclusiones del proyecto, indicando etapas futuras del proyecto y que requerimientos pudiesen ser abordados.
+
+\subsection{Actividad 4}
+
+En esta actividad se deberá detallar cuales son las especificaciones técnicas a considerar en el proyecto, así como aspectos de la metodología, siguiendo los lineamientos:
+
+\begin{enumerate}
+    \item Deberán definir el tipo de arquitectura de software a ser utilizada (MVC, MVVM, arquitectura hexagonal, arquitectura por microservicios o cualquier mixtura). Dando una breve explicación de la arquitectura a abordar
+    y como será el planteamiento en la solución del software.
+    \item Identificar el \textbf{stack} tecnológico sobre el cual trabajaran, detallando:
+    \begin{enumerate}
+        \item Lenguaje de programación a utilizar (tanto en frontend, como en backend), justificando la elección.
+        \item De usar un framework de desarrollo, explicar que otras opciones existen (a lo menos 2) y cuál fue el motivo por el cual escogieron ese y no otro (esto aplica tanto para frameworks de \textit{frontend} como de \textit{backend} de la solución).
+        \footnote{De no usar un framework, explicar las razones por las cuales no usarían un framework para desarrollar}
+        \item Motor de base de datos a ser utilizado, explicando que otros motores podrían aplicar en la solución y justificando la razón por la cual escogen el motor señalado.
+        \item Sistema operativo sobre el cual apuntan que esté orientada la solución servidor y sobre la cual sería necesario considerar la instalación del software (Linux / Windows), justificando la elección.
+        \item De ser una aplicación orientada al desarrollo móvil, indicar:
+        \begin{enumerate}
+            \item Plataforma a la que apuntan.
+            \item Tecnología a ser utilizada (código nativo / transpiladores a código nativo) justificando elección.
+        \end{enumerate}
+        \item Indicar el tipo de metodología que será utilizada por el equipo de trabajo, indicando:
+        \begin{enumerate}
+            \item Breve descripción de la metodología (no más de un párrafo).
+            \item Detalle de como trabajarán con la metodología y sus principales limitantes a la hora de utilizar la metodología siguiendo la literatura.
+            \item Explicación de la adaptaciones necesarias a ser consideradas en la metodología para poder ser utilizada en el proyecto.
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Actividad 5}
+
+En esta actividad deberán detallar los aspectos del prototipo a ser construido, utilizando para ello wireframes de baja fidelidad y explicando su flujo a través de diagramas de interacción y \textit{Storyboards}. Para ello deberán seguir los siguientes
+lineamientos:
+
+\begin{enumerate}
+    \item Por cada proceso de negocio relevante deberán construir los \textit{wireframes} de baja fidelidad involucrados en el proceso.
+    \item Estos \textit{wireframes} deberán contener una breve descripción de que requerimientos o casos de uso que consideran.
+    \item Una vez explicado, deberán dar el diagrama de interacción entre estos \textit{wireframes} a través de un \textit{Storyboard} del proceso de negocio considerado.
+    \item Deberán definir una guía de estilos a seguir en el desarrollo de la aplicación.
+\end{enumerate}
+
+\section{Forma de evaluación}
+
+La forma de evaluación se encuentra detallada en la siguiente tabla:
+
+\begin{longtable}[c]{|l|c|}
+    \hline
+    Detalle & Puntaje \\
+    \hline
+    \endfirsthead
+
+    \hline
+    Detalle & Puntaje \\
+    \hline
+    \endhead
+
+    Actividad 1 & 10 puntos total \\
+    \tabitem Definición del problema & 2 pts\\
+    \tabitem Definición de objetivos & 3 pts\\
+    \tabitem Definición de usuarios & 5 pts \\
+    \hline
+    Actividad 2 & 40 puntos total \\
+    \tabitem Definición de los procesos de negocio & 3 pts \\
+    \tabitem BPMN de los procesos de negocio & 3 pts (1 pts por cada uno) \\
+    \tabitem Diagrama de casos de uso & 3 pts (1 pts por cada uno) \\
+    \tabitem Casos de uso de alto nivel & 5 pts \\
+    \tabitem Casos de uso extendido y diagramas & 6 pts \\
+    \tabitem Modelo entidad relación & 10 pts \\
+    \tabitem Modelo relacional & 10 pts \\
+    \hline
+    Actividad 3 & 10 puntos total \\
+    \tabitem Listado de requerimientos funcionales & 4 pts \\
+    \tabitem Listado de requerimientos no funcionales & 4 pts \\
+    \tabitem Priorización de requerimientos de acuerdo a entregable & 2 pts \\ 
+    \hline
+    Actividad 4 & 10 puntos total \\
+    \tabitem Definición de lenguaje de programación y tabla comparativa & 2 pts \\
+    \tabitem Definición de framework y tabla comparativa & 2 pts \\
+    \tabitem Definición de motor de base de datos y tabla comparativa & 2 pts \\
+    \tabitem Definición de S.O a operar y justificación & 1 pts \\
+    \tabitem Metodología de trabajo y adaptaciones propuestas & 3 pts \\
+    \hline
+    Actividad 5 & 30 puntos total \\
+    \tabitem Wireframes por cada proceso de negocio & 10 pts \\
+    \tabitem Desarrollo de \textit{Storyboard} con diagrama de interacción & 10 pts \\
+    \tabitem Guía de estilos a utilizar & 10 pts \\
+    \hline
+\end{longtable}
+
+\section{Potenciales descuentos}
+
+Se podrán aplicar los siguientes descuentos al informe:
+
+\begin{longtable}[c]{|l|c|}
+    \hline
+    Detalle & Puntaje \\
+    \hline
+    \endfirsthead
+
+    \hline
+    Detalle & Puntaje \\
+    \hline
+    \endhead
+
+    Mala presentación del informe & 10 puntos \\
+    \hline
+    Omisión de índices de temas & 10 puntos \\
+    \hline
+    Mala introducción al informe & 10 puntos \\
+    \hline
+    Introducción inexistente & 15 puntos \\
+    \hline
+    Malas conclusiones o incompletas & 10 puntos \\
+    \hline
+    Omisión de conclusiones & 20 puntos \\
+    \hline
+    Faltas de ortografía y redacción & De 5 a 10 faltas - 5 puntos \\
+    & De 11 a 20 faltas - 10 puntos \\
+    & De 21 a 25 faltas - 15 puntos \\
+    & Más de 25 faltas - 20 puntos \\
+    \hline
+\end{longtable}
+
+\section{Fecha de entrega}
+
+El trabajo deberá ser entregado por el jefe de proyecto a través del AAI antes del día 30 de abril del 2021, y tendrán hasta las 23:55 hrs de ese mismo día para subir el archivo en formato PDF o Word.
+
+No se recibirán trabajos fuera de ese horario o a través de otro medio que no sea el AAI.
+
+\end{document}
